@@ -59,16 +59,15 @@
 	<header>
 		
 		
-			<h2 class="contact">Kontakt:  <i class="icon-mobile"></i>61 66 66 666  <i class="icon-mail-alt"></i> weldorado@gmail.com</a> </h2>
+			<h2 class="contact">Kontakt:  <i class="icon-mobile"></i>61 66 66 666  <i class="icon-mail-alt"></i> weldorado@gmail.com </h2>
 			
 		
 		<nav id="topnav">
-		 <div class="nav">
+		  <div class="nav">
+		 
 			<ul class="menu">
-				<li class="logo">
-					<img src="img/logo.png"  /><span class="napis">WELDORADO</span>
-				</li>
 				<li>
+					<li class="logo"><img src="img/logo.png"  /><span class="lettering">WELDORADO</span></li>
 					<li><a id="link1" href="#" class="tilelink" title="oferta">Oferta<span class="dotd">.</a></span></li>
 					<li><a id="link2" href="#" class="tilelink" title="onas">O nas<span class="dotd">.</a></span></li>
 					<li><a id="link3" href="#" class="tilelink" title="projekty">Projekty<span class="dotd">.</a></span></li>
@@ -117,7 +116,7 @@
 			
 				<section>
 				
-					<div class="offers" id="oferta">
+					<div class="offer" id="oferta">
 					
 						<header>
 						
@@ -193,7 +192,7 @@
 							<div class="box1">
 							
 								<div class="text1">
-									<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.<p>
+									<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
 								</div>
 								<div class="photo1">
 									<img src="img/offers.jpg" />
@@ -269,7 +268,7 @@
 				
 				<section id="newest">
 				
-					<div class="wspolpraca" id="wspolpraca">
+					<div class="cooperation" id="wspolpraca">
 					
 						<header>
 						
@@ -281,7 +280,7 @@
 						
 							
 							<div class="text4">
-									<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.<p>
+									<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
 							</div>
 									
 				
@@ -291,7 +290,7 @@
 				
 				<section>
 				
-					<div class="kontakt" id="kontakt">
+					<div class="firmcontact" id="kontakt">
 						
 						<header>
 						
@@ -306,9 +305,9 @@
 						
 						<div class="box5">
 						
-							<div class="adres">
+							<div class="adress">
 								<h4>Adres firmy</h4>
-								<p>Weldorado Michał Piechocki</br>NIP działalności: 7822468158</br>Starołęcka 57d, 61-361 Poznań</br></br><i class="icon-mail-alt">weldorado@gmail.com</i>
+								<p>Weldorado Michał Piechocki<br> NIP działalności: 7822468158<br> Starołęcka 57d, 61-361 Poznań<br><br><i class="icon-mail-alt">weldorado@gmail.com</i></p>
 							</div>
 						</div>
 						
@@ -344,6 +343,30 @@
 	</footer>
 	
 	<script src="jquery-1.11.3.min.js"></script>
+	 
+	 <script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+	</script>
 	 
 
 
